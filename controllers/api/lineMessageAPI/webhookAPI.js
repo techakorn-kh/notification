@@ -38,7 +38,10 @@ module.exports = {
                 throw err;
             });
 
-            return res.json(dataValue);
+            return res.json({
+                dataValue,
+                json: JSON.stringify(dataValue)
+            });
 
             // Check Quota Message
             await Promise.all([
