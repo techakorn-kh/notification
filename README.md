@@ -1,2 +1,2 @@
-# notification
-Notification
+# notify
+Service API Message API
