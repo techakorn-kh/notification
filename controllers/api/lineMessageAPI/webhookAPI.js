@@ -34,6 +34,12 @@ module.exports = {
                 message: `Your account is not registered yet. Please contact the relevant person.`
             });
 
+            const dataValue = await groupMembersIds({ ...result }).catch((err)=>{
+                throw err;
+            });
+
+            return res.json(dataValue);
+
             // Check Quota Message
             await Promise.all([
                 messageQuota({ ...result }),
